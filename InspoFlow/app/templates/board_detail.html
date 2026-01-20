@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block title %} {{ board.title }} {% endblock %}
+{% load static %}
+
+{% block content %}
+
+    <h1 class="center-title">{{ board.title }}</h1>
+
+    {% if images %}
+        <div class="image-grid">
+            {% for image in images %}
+                <div class="image-container1">
+                    <a href="{% url 'image_detail' image_id=image.id %}">
+                        <img src="{{ image.url }}" alt="{{ image.title }}">
+                    </a>
+
+                    <form action="{% url 'remove_image_from_board' board.id image.id %}" method="post" style="display:inline;"onsubmit="return confirm('Are you sure you want to delete this image?');">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm mt-2">Remove</button>
+                    </form>
+                    
+                </div>
+            {% endfor %}
+        </div>
+        
+    {% else %}
+        <p>No images saved in this board yet.</p>
+    {% endif %}
+
+    <a href= "{% url 'user_profile' %}" class="btn btn-light add-image-btn" >Back to Profile</a>
+    <script src="{% static 'app/masonry.js' %}"></script>
+
+{% endblock %}

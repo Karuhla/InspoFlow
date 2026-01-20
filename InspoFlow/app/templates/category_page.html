@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} {{ category.name }} {% endblock %}
+{% load static %}
+
+{% block content %}
+    <h1 class="center-title">{{ category.name }}</h1>
+
+    <div class="image-grid">
+        {% for image in images %}
+            <div class="image-container1">
+                <a href="{% url 'image_detail' image_id=image.id %}">
+                    <img src="{{ image.url }}" alt="{{ image.alt_text }}">
+                </a>    
+                
+            </div>
+        {% empty %}
+            <p>No pictures available.</p>
+        {% endfor %}
+    </div>
+
+    <script src="{% static 'app/masonry.js' %}"></script>
+{% endblock %}

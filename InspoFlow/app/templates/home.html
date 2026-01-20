@@ -1,0 +1,83 @@
+
+{% extends "base.html" %} {% block title %} Home Page {% endblock %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'app/masonry.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="center-title">Choose a category:</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="image-container">
+                <a href="{% url 'category' category_name='Travel' %}">
+                    <img src="{% static 'images/travel/travel_naslovna.jpeg' %}" width="350" height="350" alt="TRAVEL">
+                    <div class="image-title">TRAVEL</div>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="{% url 'category' category_name='Fashion' %}">
+                    <img src="{% static 'images/fashion/fashion_naslovna.jpeg' %}" width="350" height="350" alt="FASHION">
+                    <div class="image-title">FASHION</div>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="{% url 'category' category_name='Beauty' %}">
+                    <img src="{% static 'images/beauty/beauty_naslovna.jpeg' %}" width="350" height="350" alt="BEAUTY">
+                    <div class="image-title">BEAUTY</div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image-container">
+                <a href="{% url 'category' category_name='Cooking' %}">
+                    <img src="{% static 'images/cooking/cooking_naslovna.jpeg' %}" width="350" height="350" alt="COOKING">
+                    <div class="image-title">COOKING</div>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="{% url 'category' category_name='Art' %}">
+                    <img src="{% static 'images/art/art_naslovna.jpeg' %}" width="350" height="350" alt="ART">
+                    <div class="image-title">ART</div>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="{% url 'category' category_name='Home decor' %}">
+                    <img src="{% static 'images/home decor/decor_naslovna.jpeg' %}" width="350" height="350" alt="DECOR">
+                    <div class="image-title">HOME DECOR</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    
+    <div class="image-grid">
+        {% for image in images %}
+            <div class="image-container1">
+                <a href="{% url 'image_detail' image_id=image.id %}">
+                    <img src="{{ image.url }}" alt="{{ image.alt_text }}">
+                </a>    
+                
+
+                
+                
+            </div>
+        {% empty %}
+            <p>No pictures available.</p>
+        {% endfor %}
+
+        
+    </div>
+    
+
+</body>
+</html>
+
+
+{% endblock %}

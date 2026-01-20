@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %} Add a New Image {% endblock %}
+{% block content %}
+
+<h1 class="center-title">Add a New Image</h1>
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        
+<div class="mb-3">
+    <label for="id_url" class="form-label">URL</label>
+    <input type="url" name="url" id="id_url" class="form-control" placeholder="Enter the image URL" value="{{ form.url.value }}">
+</div>
+
+<div class="mb-3">
+    <label for="id_alt_text" class="form-label">Alt Text</label>
+    <input type="text" name="alt_text" id="id_alt_text" class="form-control" placeholder="Enter alt text for the image" value="{{ form.alt_text.value }}">
+</div>
+
+<div class="mb-3">
+    <label for="id_category" class="form-label">Category</label>
+    <select name="category" id="id_category" class="form-select">
+        <option value="" disabled selected>Select a category</option>
+        {% for category in form.category.field.queryset %}
+            <option value="{{ category.id }}" {% if category.id == form.category.value %} selected {% endif %}>
+                {{ category.name }}
+            </option>
+        {% endfor %}
+    </select>
+</div>
+
+
+        <button type="submit" class="btn btn-light">Upload image</button>
+    </form>
+
+    <a href="{% url 'home' %}" class="btn btn-dark">Back to Home</a>
+</div>
+
+{% endblock %}

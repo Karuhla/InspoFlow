@@ -1,0 +1,190 @@
+[
+{
+    "model": "app.board",
+    "pk": 3,
+    "fields": {
+        "title": "dress",
+        "user": 2,
+        "description": "",
+        "created_at": "2025-02-06T11:43:01.955Z",
+        "images": [
+            1,
+            2,
+            14
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 4,
+    "fields": {
+        "title": "Green",
+        "user": 1,
+        "description": null,
+        "created_at": "2025-02-06T11:54:39.899Z",
+        "images": [
+            19,
+            25,
+            27,
+            29,
+            46,
+            58,
+            65
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 5,
+    "fields": {
+        "title": "Lipstick ideas",
+        "user": 2,
+        "description": null,
+        "created_at": "2025-02-11T12:19:43.815Z",
+        "images": [
+            48
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 6,
+    "fields": {
+        "title": "Nails",
+        "user": 5,
+        "description": null,
+        "created_at": "2025-02-11T13:48:56.313Z",
+        "images": [
+            21,
+            44,
+            60
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 7,
+    "fields": {
+        "title": "Paintings",
+        "user": 5,
+        "description": null,
+        "created_at": "2025-02-11T14:08:21.654Z",
+        "images": [
+            9,
+            10
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 8,
+    "fields": {
+        "title": "Fashion",
+        "user": 6,
+        "description": null,
+        "created_at": "2025-02-11T16:49:42.204Z",
+        "images": [
+            20,
+            25,
+            49
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 9,
+    "fields": {
+        "title": "student meals",
+        "user": 6,
+        "description": null,
+        "created_at": "2025-02-11T16:52:34.516Z",
+        "images": [
+            4,
+            16,
+            22
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 10,
+    "fields": {
+        "title": "Drawings",
+        "user": 1,
+        "description": null,
+        "created_at": "2025-02-11T18:18:34.453Z",
+        "images": [
+            17,
+            52,
+            64
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 11,
+    "fields": {
+        "title": "Cakes",
+        "user": 1,
+        "description": null,
+        "created_at": "2025-02-11T18:20:29.189Z",
+        "images": [
+            53,
+            56
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 12,
+    "fields": {
+        "title": "Dress",
+        "user": 1,
+        "description": null,
+        "created_at": "2025-02-11T18:27:43.732Z",
+        "images": [
+            1
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 13,
+    "fields": {
+        "title": "3D art",
+        "user": 3,
+        "description": null,
+        "created_at": "2025-02-11T18:41:03.037Z",
+        "images": [
+            36
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 18,
+    "fields": {
+        "title": "Dior",
+        "user": 13,
+        "description": null,
+        "created_at": "2025-02-11T20:08:58.388Z",
+        "images": [
+            7
+        ]
+    }
+},
+{
+    "model": "app.board",
+    "pk": 19,
+    "fields": {
+        "title": "Mountains",
+        "user": 13,
+        "description": null,
+        "created_at": "2025-02-11T20:18:33.567Z",
+        "images": [
+            6,
+            13
+        ]
+    }
+}
+]
